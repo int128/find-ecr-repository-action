@@ -1,15 +1,12 @@
 import * as core from '@actions/core'
 import { run } from './run.js'
-import { getContext, getOctokit } from './github.js'
 
 try {
-  await run(
-    {
-      name: core.getInput('name', { required: true }),
-    },
-    getOctokit(),
-    await getContext(),
-  )
+  const outputs = await run({
+    repositoryName: core.getInput('repository-name', { required: true }),
+    repositoryNotFoundMessage: core.getInput('repository-not-found-message', { required: true }),
+  })
+  core.setOutput('repository-uri', outputs.repositoryURI)
 } catch (e) {
   core.setFailed(e instanceof Error ? e : String(e))
   console.error(e)

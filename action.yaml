@@ -1,14 +1,19 @@
-name: typescript-action
-description: Template of TypeScript Action
+name: find-ecr-repository-action
+description: Find a repository in Amazon ECR
 
 inputs:
-  name:
-    description: Example
+  repository-name:
+    description: Name of the repository in Amazon ECR
     required: true
-  token:
-    description: GitHub token
+  repository-not-found-message:
+    description: Error message to display if the repository is not found
     required: true
-    default: ${{ github.token }}
+    default: |-
+      Repository {{repository-name}} not found
+
+outputs:
+  repository-uri:
+    description: URI of the repository in Amazon ECR
 
 runs:
   using: 'node20'
