@@ -8,8 +8,8 @@ inputs:
   repository-name:
     description: Name of the repository in Amazon ECR
     required: true
-  repository-not-found-message:
-    description: Error message to display if the repository is not found
+  repository-not-found-error-message:
+    description: Error message to throw if the repository is not found
     required: true
     default: |-
       Repository {{repository-name}} not found
