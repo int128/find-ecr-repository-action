@@ -2,6 +2,9 @@ name: find-ecr-repository-action
 description: Find a repository in Amazon ECR
 
 inputs:
+  registry-id:
+    description: AWS account ID of the repository. If not set, the default account will be used.
+    required: false
   repository-name:
     description: Name of the repository in Amazon ECR
     required: true

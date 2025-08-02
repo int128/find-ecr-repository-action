@@ -3,6 +3,7 @@ import { run } from './run.js'
 
 try {
   const outputs = await run({
+    registryId: core.getInput('registry-id') || undefined,
     repositoryName: core.getInput('repository-name', { required: true }),
     repositoryNotFoundMessage: core.getInput('repository-not-found-message', { required: true }),
   })
