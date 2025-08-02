@@ -11,7 +11,7 @@ inputs:
   repository-not-found-error-message:
     description: Error message to throw if the repository is not found
     required: true
-    default: |-
+    default: |
       Repository {{repository-name}} not found
 
 outputs:

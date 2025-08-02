@@ -26,7 +26,7 @@ export const run = async (inputs: Inputs): Promise<Outputs> => {
   } catch (error) {
     if (ecr.RepositoryNotFoundException.isInstance(error)) {
       core.info(`Repository not found: ${error.message}`)
-      const message = inputs.repositoryNotFoundErrorMessage.replace('{{repository-name}}', inputs.repositoryName)
+      const message = inputs.repositoryNotFoundErrorMessage.replace('{{repository-name}}', inputs.repositoryName).trim()
       throw new Error(message)
     }
     throw error
