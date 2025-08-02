@@ -25,11 +25,11 @@ jobs:
 
 ### Inputs
 
-| Name                           | Default                    | Description                                                                     |
-| ------------------------------ | -------------------------- | ------------------------------------------------------------------------------- |
-| `registry-id`                  | -                          | AWS account ID of the repository. If not set, the default account will be used. |
-| `repository-name`              | (required)                 | Name of the repository in Amazon ECR                                            |
-| `repository-not-found-message` | [action.yaml](action.yaml) | Error message to display if the repository is not found                         |
+| Name                                 | Default                    | Description                                                                     |
+| ------------------------------------ | -------------------------- | ------------------------------------------------------------------------------- |
+| `registry-id`                        | -                          | AWS account ID of the repository. If not set, the default account will be used. |
+| `repository-name`                    | (required)                 | Name of the repository in Amazon ECR                                            |
+| `repository-not-found-error-message` | [action.yaml](action.yaml) | Error message to throw if the repository is not found                           |
 
 ### Outputs
 

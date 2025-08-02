@@ -5,7 +5,7 @@ try {
   const outputs = await run({
     registryId: core.getInput('registry-id') || undefined,
     repositoryName: core.getInput('repository-name', { required: true }),
-    repositoryNotFoundMessage: core.getInput('repository-not-found-message', { required: true }),
+    repositoryNotFoundErrorMessage: core.getInput('repository-not-found-error-message', { required: true }),
   })
   core.setOutput('repository-uri', outputs.repositoryURI)
 } catch (e) {

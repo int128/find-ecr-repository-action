@@ -5,7 +5,7 @@ import * as ecr from '@aws-sdk/client-ecr'
 type Inputs = {
   registryId: string | undefined
   repositoryName: string
-  repositoryNotFoundMessage: string
+  repositoryNotFoundErrorMessage: string
 }
 
 type Outputs = {
@@ -26,7 +26,7 @@ export const run = async (inputs: Inputs): Promise<Outputs> => {
   } catch (error) {
     if (ecr.RepositoryNotFoundException.isInstance(error)) {
       core.info(`Repository not found: ${error.message}`)
-      const message = inputs.repositoryNotFoundMessage.replace('{{repository-name}}', inputs.repositoryName)
+      const message = inputs.repositoryNotFoundErrorMessage.replace('{{repository-name}}', inputs.repositoryName)
       throw new Error(message)
     }
     throw error
