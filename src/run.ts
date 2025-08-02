@@ -3,6 +3,7 @@ import * as core from '@actions/core'
 import * as ecr from '@aws-sdk/client-ecr'
 
 type Inputs = {
+  registryId: string | undefined
   repositoryName: string
   repositoryNotFoundMessage: string
 }
@@ -16,7 +17,12 @@ export const run = async (inputs: Inputs): Promise<Outputs> => {
   core.info(`Describing the repository: ${inputs.repositoryName}`)
   let describe
   try {
-    describe = await client.send(new ecr.DescribeRepositoriesCommand({ repositoryNames: [inputs.repositoryName] }))
+    describe = await client.send(
+      new ecr.DescribeRepositoriesCommand({
+        registryId: inputs.registryId,
+        repositoryNames: [inputs.repositoryName],
+      }),
+    )
   } catch (error) {
     if (ecr.RepositoryNotFoundException.isInstance(error)) {
       core.info(`Repository not found: ${error.message}`)
