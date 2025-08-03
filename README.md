@@ -29,6 +29,17 @@ jobs:
           tags: ${{ steps.metadata.outputs.tags }}
 ```
 
+You can set a custom error message if the repository is not found.
+
+```yaml
+- uses: int128/find-ecr-repository-action@v1
+  with:
+    repository-name: hello-world
+    repository-not-found-error-message: |
+      Repository {{repository-name}} not found in Amazon ECR.
+      You need to create it by Terraform.
+```
+
 ## Specification
 
 ### Inputs
