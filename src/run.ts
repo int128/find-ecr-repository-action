@@ -1,4 +1,4 @@
-import assert from 'assert'
+import assert from 'node:assert'
 import * as core from '@actions/core'
 import * as ecr from '@aws-sdk/client-ecr'
 
@@ -15,7 +15,7 @@ type Outputs = {
 export const run = async (inputs: Inputs): Promise<Outputs> => {
   const client = new ecr.ECRClient({})
   core.info(`Describing the repository: ${inputs.repositoryName}`)
-  let describe
+  let describe: ecr.DescribeRepositoriesCommandOutput
   try {
     describe = await client.send(
       new ecr.DescribeRepositoriesCommand({
