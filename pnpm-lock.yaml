@@ -12,8 +12,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       '@aws-sdk/client-ecr':
-        specifier: 3.1014.0
-        version: 3.1014.0
+        specifier: 3.1019.0
+        version: 3.1019.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.3.10
@@ -64,8 +64,8 @@ packages:
   '@aws-crypto/util@5.2.0':
     resolution: {integrity: sha512-4RkU9EsI6ZpBve5fseQlGNUWKMa1RLPQ1dnjnQoe07ldfIzcsGb5hC5W0Dm7u423KWzawlrpbjXBrXCEv9zazQ==}
 
-  '@aws-sdk/client-ecr@3.1014.0':
-    resolution: {integrity: sha512-DiyMa+GV1zlykaQwqel9kAGvVuMpLMGVbBaWc69bbtfTnlfQH6lthBiS19q53dDfh4GoCmy+1CoGwV3ftALg5g==}
+  '@aws-sdk/client-ecr@3.1019.0':
+    resolution: {integrity: sha512-lt/BsmFm2JUcqvgK5ifEZxVmOGmzFl5eGtS4QzhSf7zsN1u55qU3K7iTP5nMfR+eQO02I/72x5ZbexSCQumK/A==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/core@3.973.25':
@@ -909,7 +909,7 @@ snapshots:
       '@smithy/util-utf8': 2.3.0
       tslib: 2.8.1
 
-  '@aws-sdk/client-ecr@3.1014.0':
+  '@aws-sdk/client-ecr@3.1019.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
