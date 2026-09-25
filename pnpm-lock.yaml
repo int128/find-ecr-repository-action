@@ -170,8 +170,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       '@aws-sdk/client-ecr':
-        specifier: 3.1131.0
-        version: 3.1131.0
+        specifier: 3.1136.0
+        version: 3.1136.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.13
@@ -209,8 +209,8 @@ packages:
   '@actions/io@3.0.2':
     resolution: {integrity: sha512-nRBchcMM+QK1pdjO7/idu86rbJI5YHUKCvKs0KxnSYbVe3F51UfGxuZX4Qy/fWlp6l7gWFwIkrOzN+oUK03kfw==}
 
-  '@aws-sdk/client-ecr@3.1131.0':
-    resolution: {integrity: sha512-CEwZLenbKxl9+3/REZbmHKxxMDj6ocfYIL87uqXSMWPItTDfLdRNkNE52tPs3cHN3b1QXbW1BHo7nMuha7bHuw==}
+  '@aws-sdk/client-ecr@3.1136.0':
+    resolution: {integrity: sha512-/3V5KNzp/vGHQ1pmWRiRwhNe1TgM5RyUeCHTlo8REFC/RTQ5C7uDNdkRvswGE1vVm1nMftpSlSygz2I2sLo/WQ==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/core@3.978.0':
@@ -873,7 +873,7 @@ snapshots:
 
   '@actions/io@3.0.2': {}
 
-  '@aws-sdk/client-ecr@3.1131.0':
+  '@aws-sdk/client-ecr@3.1136.0':
     dependencies:
       '@aws-sdk/core': 3.978.0
       '@aws-sdk/credential-provider-node': 3.972.83
